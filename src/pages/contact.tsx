@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout"
 
-export default function Home() {
+export default function contact() {
   return (
-    <Layout home>
+    <Layout>
       <div className='container-section bg-myorange'>
-        <h1>BIENVENIDO</h1>
+        <h1>CONTACTO</h1>
       </div>
     </Layout>
   )
