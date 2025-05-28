@@ -46,6 +46,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params?.slug}`)
   const post = await res.json()
 
+  if (!post.id) {
+    return {
+      notFound: true, // Esto genera un 404 si no existe el post
+    }
+  }
+
   return {
     props: {
       post,
