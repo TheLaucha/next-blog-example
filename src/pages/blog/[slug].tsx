@@ -9,7 +9,9 @@ interface Post {
 }
 
 export default function PostPage({ post }: { post: Post }) {
-  console.log(post)
+  if (!post) {
+    return <p>Post not found</p>
+  }
   return (
     <Layout>
       <div className='container-section bg-myorange'>
